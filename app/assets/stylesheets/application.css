@@ -1,12 +1,12 @@
 body {
   width: 600px;
   margin: 20px auto;
-  background-color: #337; 
-  color: #337;
+  background-color: #333; 
+  color: #333;
 }
 
 body, p, ol, ul, td {
-  font-family: 'Arial', Arial;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size:   16px;
   line-height: 24px;
   color: white;
@@ -44,8 +44,8 @@ header p {
 }
 h1 {
   color: #ffc;
-  font-size: 40px;
-  padding-left: 2px;
+  font-size: 32px;
+  padding-left: 6px;
 }
 
 label {
@@ -56,27 +56,27 @@ label {
   background-color: #373737;
 }
 
-.connection {
+.project .role {
   position: relative;
   border-bottom: 1px solid #666;
 }
-.connection {
+.project .role.first {
   border-top: 1px solid #666;
 }
 
-.connection {
+.project .role .person-name {
   font-weight: bold;
   font-size: 24px;
   display: block;
   padding: 6px 0 4px 6px;
   color: #ccc;
 }
-.connection{
+.project .role .role-title {
   display: block;
   color: #999;
   padding: 0 0 4px 6px;
 }
-.connection {
+.project .role .status-title {
   text-transform: uppercase;
   font-size: 10px;
   font-weight: bold;
