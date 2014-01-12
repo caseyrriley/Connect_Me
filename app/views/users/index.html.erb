@@ -1,0 +1,26 @@
+<h1>Listing users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%=user.first_name%> <%=user.last_name%>
+        <td><%= button_to 'Show', user, :method=> :get %></td>
+        <td><%= button_to 'Edit', edit_user_path(user), :method=> :get %></td>
+        <td><%= button_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :method=> :get %></td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

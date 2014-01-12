@@ -1,6 +1,6 @@
-<h1><%= @connection.name %></h1>
+<h2><%= @connection.name %></h2><ln>
 <p id="notice"><%= notice %></p>
-<h3><%=@connection.phone_number %><h3>
-	<h3><%=@connection.email_address %><h3>
-<%= link_to 'Edit', edit_connection_path(@connection) %> |
+<h3>Phone number:  <%=@connection.phone_number %><h3>
+<h3>Email address:  <%=mail_to(@connection.email_address) %><h3>
+<%= link_to 'Edit', edit_connection_path(@connection)%> |
 <%= link_to 'Back', connections_path %>

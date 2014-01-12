@@ -1,21 +1,15 @@
-<h1>Active connections</h1>
+<h1>Open connections</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
+  
   <tbody>
     <% @connections.each do |connection| %>
       <tr>
-        <td><%= connection.name %></td>
-        <td><%= button_to 'Show', connection %></td>
-        <td><%= link_to 'Edit', edit_connection_path(connection) %></td>
-        <td><%= button_to 'Destroy', connection, data: {:confirm =>'Are you sure?'},:method => :delete %></td>
+       <td><%= connection.name %><br>
+       Last updated: <%= connection.updated_at.to_formatted_s(:long)%>
+        <td><%= button_to 'Show', connection, :method=> :get %></td>
+        <td><%= button_to 'Edit', edit_connection_path(connection), :method=> :get %></td>
+        <td><%= button_to 'Delete', connection, data: {:confirm =>'Are you sure?'},:method => :delete %></td></td>
       </tr>
     <% end %>
   </tbody>
@@ -23,4 +17,4 @@
 
 <br>
 
-<%= link_to 'New Connection', new_connection_path %>
+<%= button_to 'New Connection', new_connection_path, :method=> :get %>

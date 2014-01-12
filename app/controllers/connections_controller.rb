@@ -32,7 +32,7 @@ class ConnectionsController < ApplicationController
 
     respond_to do |format|
       if @connection.save
-        format.html { redirect_to @connection, notice: 'Task was successfully created.' }
+        format.html { redirect_to @connection, notice: 'Connection was successfully created.' }
         format.json { render action: 'show', status: :created, location: @connection }
       else
         format.html { render action: 'new' }
@@ -60,7 +60,7 @@ class ConnectionsController < ApplicationController
  def destroy
     connection = Connection.find(params[:id])
     if connection.destroy
-      flash[:notice] = 'The connection was destroyed.'
+      flash[:notice] = 'The connection was deleted.'
     else
       flash[:alert] = 'The connection could not be destroyed'
     end
