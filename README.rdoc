@@ -1,28 +1,28 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Connect Me- Church communication/follow-up made easy
 
-Things you may want to cover:
+Quick Specs (Sorry very brief at the moment)
 
-* Ruby version
+* Ruby version: 4.0.2
 
-* System dependencies
+* Sqlite database
 
-* Configuration
+* Using formtastic plugin 1.2.3
 
-* Database creation
+Goal of this app:
 
-* Database initialization
+The goal of this app is to create a workflow for people seeking to get connected in the church or just needing some form 
+of contact from Ministry staff. 
 
-* How to run the test suite
+Tasks to be completed:
+- Assign connections to users
+- Set up email notification on update/creation/deletion
+- Set up staff sign up page
+- Set up some sort of authentication
+- Find someone or something to style this app better
+- Create alerts when connection becomes "stale"
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+About the creator: This is one of two projects I have created after spending 2 weeks learning ruby/html5/css/rails, so please 
+ignore any abnormal syntax or unconventional methods of getting the desired outcome.
