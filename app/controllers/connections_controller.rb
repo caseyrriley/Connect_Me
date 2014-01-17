@@ -23,7 +23,8 @@ class ConnectionsController < ApplicationController
   end
   def new
     @connection=Connection.new(params[:connection])
-  end
+    @user= @connection.user(params[:user_id])
+      end
 
   # POST /connections
   # POST /connections.json
