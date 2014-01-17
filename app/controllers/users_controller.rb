@@ -11,8 +11,8 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
   @user= User.find(params[:id])
-  @connection = Connection.all
-  end
+  @connection = @user.connections
+end
 
   # GET /users/new
   def new
