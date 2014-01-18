@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
-Showing Assigned Connections for <%= @user.first_name%> <%=@user.last_name%><br>
-Email address:  <%=mail_to(@user.email_address) %><br>
+<h2>Showing assigned connections for <%= @user.first_name%> <%=@user.last_name%><br>
+</h2>
 Open Connections: <%=@connection.count%>
 <br>
 <br>
-<h2>Assigned:</h2> <br><% @connection.each do |connection| %>
+<h3>Assigned:</h3> <br><% @connection.each do |connection| %>
     <tr>
       Visitor: <td><%= connection.name %> <br>
       Email: <%=mail_to(connection.email_address) %><br>
-      Phone Number: <%= connection.phone_number %></td>
+      Phone Number: <%= connection.phone_number %></td><br>
+      Last Updated: <%= connection.updated_at.to_formatted_s(:long)%>
             <ln>
     </tr>
     <hr>

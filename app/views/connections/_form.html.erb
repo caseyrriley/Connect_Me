@@ -1,33 +1,11 @@
-<%= form_for(@connection) do |f| %>
-  <% if @connection.errors.any? %>
-    <div id="error_explanation">
-      <h3><%= pluralize(@connection.errors.count, "error") %> prohibited this connection from being saved:</h3>
-
-      <ul>
-      <% @connection.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-<div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :phone_number %><br>
-    <%= f.text_field :phone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :email_address %><br>
-    <%= f.text_field :email_address %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-
-  </div>
-<% end %>
+<%= semantic_form_for(@connection) do |form| %>
+<%= form.inputs do%>
+<%= form.input :name %>
+<%= form.input :phone_number %>
+<%= form.input :email_address %>
+<%= form.input :interested_in %>
+Assign to: <%= form.collection_select :user_id, User.all, :id, :ministry, prompt: true %>
+<% end %>	
+  <%= form.buttons %>
+ 
+ <% end %>

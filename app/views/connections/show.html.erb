@@ -3,6 +3,11 @@
 
 <h3>Phone number:  <%=@connection.phone_number %><h3>
 <h3>Email address:  <%=mail_to(@connection.email_address) %><h3>
-User assigned: <%=@connection.user_id %>
-<%= link_to 'Edit', edit_connection_path(@connection)%> |
-<%= link_to 'Back', connections_path %>
+<h3>Interested in: <%=@connection.interested_in%></h3>
+<h3>Department assigned:  <%=@connection.user.ministry%></h3>
+<br>
+<%= button_to 'Edit', edit_connection_path(@connection), :method => :get%> 
+<%= button_to 'Back', connections_path, :method => :get %>
+
+
+

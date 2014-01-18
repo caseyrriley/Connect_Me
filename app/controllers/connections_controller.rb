@@ -75,7 +75,7 @@ class ConnectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def connection_params
-      params.require(:connection).permit(:name, :email_address, :phone_number,:user_id, :created_at, :updated_at)
+      params.require(:connection).permit(:name, :email_address,:interested_in, :phone_number,:user_id, :created_at, :updated_at)
     end
     
 end
