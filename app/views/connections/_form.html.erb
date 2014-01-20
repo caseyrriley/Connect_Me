@@ -1,11 +1,14 @@
 <%= semantic_form_for(@connection) do |form| %>
 <%= form.inputs do%>
+
 <%= form.input :name %>
 <%= form.input :phone_number %>
 <%= form.input :email_address %>
-<%= form.input :interested_in %>
-Assign to: <%= form.collection_select :user_id, User.all, :id, :ministry, prompt: true %>
+<%= form.input :interested_in%>
+<%= form.collection_select :user_id, User.all, :id, :ministry, :null => :false, :prompt => "Please select ministry to assign" %> 
 <% end %>	
-  <%= form.buttons %>
+<br> 
+<br>
+<%= form.buttons %>
  
  <% end %>

@@ -10,6 +10,7 @@ Open Connections: <%=@connection.count%>
       Email: <%=mail_to(connection.email_address) %><br>
       Phone Number: <%= connection.phone_number %></td><br>
       Last Updated: <%= connection.updated_at.to_formatted_s(:long)%>
+      <%= button_to 'Show', connection, :method=> :get %>
             <ln>
     </tr>
     <hr>
