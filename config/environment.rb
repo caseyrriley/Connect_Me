@@ -13,3 +13,4 @@ ConnectMe::Application.initialize!
   password:             'cr03011990',
   authentication:       'plain',
   enable_starttls_auto: true  }
+end
