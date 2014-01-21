@@ -34,13 +34,6 @@ ConnectMe::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'ranchocommunity.org',
-  user_name:            'casey.r@ranchocommunity.org',
-  password:             'cr03011990',
-  authentication:       'plain',
-  enable_starttls_auto: true  }
+  config.action_mailer.delivery_method= :file
+ 
 end

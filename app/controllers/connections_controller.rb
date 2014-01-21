@@ -33,7 +33,7 @@ class ConnectionsController < ApplicationController
 
     respond_to do |format|
       if @connection.save
-        UserMailer.welcome_email(@connection).deliver
+        UserMailer.welcome_email(@connection) .deliver
 
         format.html { redirect_to @connection, notice: 'Connection was successfully created.' }
         format.json { render action: 'show', status: :created, location: @connection }
