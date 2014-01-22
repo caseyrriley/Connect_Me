@@ -4,7 +4,7 @@ Connect Me- Church communication/follow-up made easy
 
 Quick Specs (Sorry very brief at the moment)
 
-* Ruby version: 4.0.2
+* Ruby version: 2.0.0
 
 * Sqlite database
 
