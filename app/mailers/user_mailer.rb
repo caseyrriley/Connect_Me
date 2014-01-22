@@ -7,4 +7,6 @@ class UserMailer < ActionMailer::Base
   	mail(to: @connection.email_address, subject: "Thank you for visiting Rancho Community Church")
   	
   end
+
+  
 end
